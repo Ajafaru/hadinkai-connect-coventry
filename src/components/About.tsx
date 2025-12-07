@@ -1,4 +1,5 @@
 import { Shield, Heart, Users, Globe } from "lucide-react";
+import communityImage from "@/assets/community-gathering.jpg";
 
 const values = [
   {
@@ -41,22 +42,18 @@ const About = () => {
 
         {/* Main Content */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-          {/* Image/Visual */}
+          {/* Image */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 overflow-hidden relative">
-              <div className="absolute inset-0 pattern-cultural opacity-30" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
-                    <Users className="w-12 h-12 text-primary" />
-                  </div>
-                  <h3 className="font-heading text-2xl font-bold text-foreground mb-2">Hadin Kai</h3>
-                  <p className="text-muted-foreground italic">"Strength in Unity"</p>
-                </div>
-              </div>
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-card">
+              <img 
+                src={communityImage} 
+                alt="Hadin Kai Community gathering and celebration" 
+                className="w-full h-full object-cover"
+              />
             </div>
             {/* Decorative accent */}
             <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl bg-secondary/20 -z-10" />
+            <div className="absolute -top-4 -left-4 w-24 h-24 rounded-2xl bg-primary/10 -z-10" />
           </div>
 
           {/* Text Content */}
@@ -81,6 +78,13 @@ const About = () => {
               <strong className="text-foreground"> diaspora collaboration</strong> efforts that benefit 
               communities both here in the UK and back home.
             </p>
+            
+            {/* Motto highlight */}
+            <div className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/5 border border-primary/20">
+              <span className="text-secondary font-heading font-semibold text-lg">Hadin Kai</span>
+              <span className="text-muted-foreground">–</span>
+              <span className="text-foreground italic">"Strength in Unity"</span>
+            </div>
           </div>
         </div>
 
