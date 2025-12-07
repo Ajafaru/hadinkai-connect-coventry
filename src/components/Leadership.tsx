@@ -1,4 +1,5 @@
 import { Crown, Award, Users } from "lucide-react";
+import leaderImage from "@/assets/leader-portrait.jpg";
 
 const Leadership = () => {
   return (
@@ -26,13 +27,14 @@ const Leadership = () => {
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
             
             <div className="relative flex flex-col md:flex-row items-center gap-8">
-              {/* Photo placeholder */}
+              {/* Photo */}
               <div className="flex-shrink-0">
-                <div className="w-48 h-48 rounded-2xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center shadow-card">
-                  <div className="text-center">
-                    <Crown className="w-16 h-16 text-primary-foreground mx-auto mb-2" />
-                    <span className="text-primary-foreground/80 text-sm">Sarkin Zango</span>
-                  </div>
+                <div className="w-48 h-56 rounded-2xl overflow-hidden shadow-card">
+                  <img 
+                    src={leaderImage} 
+                    alt="His Highness, Alhaji Ali Umar Abass - Sarkin Zango Coventry" 
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
               </div>
 
