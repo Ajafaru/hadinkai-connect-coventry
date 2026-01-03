@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 import communityElders from "@/assets/community-elders.jpg";
 import communityMeeting from "@/assets/community-meeting.jpg";
@@ -6,6 +6,14 @@ import communityLordMayor from "@/assets/community-lord-mayor.jpg";
 import youthStudy from "@/assets/youth-study.jpg";
 import youthGathering from "@/assets/youth-gathering.jpg";
 import sarkinThrone from "@/assets/sarkin-zango-throne.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 
 const galleryImages = [
   {
@@ -42,6 +50,19 @@ const galleryImages = [
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<typeof galleryImages[0] | null>(null);
+  const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
+
+  useEffect(() => {
+    if (!carouselApi) {
+      return;
+    }
+
+    const interval = window.setInterval(() => {
+      carouselApi.scrollNext();
+    }, 5000);
+
+    return () => window.clearInterval(interval);
+  }, [carouselApi]);
 
   return (
     <section id="gallery" className="py-24 bg-background">
@@ -60,34 +81,41 @@ const Gallery = () => {
           </p>
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-          {galleryImages.map((image, index) => (
-            <div
-              key={index}
-              onClick={() => setSelectedImage(image)}
-              className={`group relative overflow-hidden rounded-xl cursor-pointer hover-lift ${
-                index === 0 ? "md:col-span-2 md:row-span-2" : ""
-              }`}
-            >
-              <div className={`aspect-square ${index === 0 ? "md:aspect-auto md:h-full" : ""}`}>
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <p className="text-primary-foreground font-medium text-sm md:text-base">
-                    {image.caption}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Gallery Carousel */}
+        <Carousel
+          setApi={setCarouselApi}
+          opts={{ loop: true, align: "start" }}
+          className="relative"
+        >
+          <CarouselContent>
+            {galleryImages.map((image, index) => (
+              <CarouselItem key={index} className="pl-0">
+                <button
+                  type="button"
+                  onClick={() => setSelectedImage(image)}
+                  className="group relative w-full overflow-hidden rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                >
+                  <div className="aspect-[16/9] md:aspect-[3/2] lg:aspect-[5/2]">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent">
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <p className="text-primary-foreground font-semibold text-base md:text-lg">
+                        {image.caption}
+                      </p>
+                    </div>
+                  </div>
+                </button>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="-left-6" />
+          <CarouselNext className="-right-6" />
+        </Carousel>
       </div>
 
       {/* Lightbox Modal */}

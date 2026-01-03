@@ -1,6 +1,5 @@
 import { Shield, Heart, Users, Globe } from "lucide-react";
-import communityImage from "@/assets/community-elders.jpg";
-import meetingImage from "@/assets/community-meeting.jpg";
+import communityLordMayor from "@/assets/community-lord-mayor.jpg";
 
 const values = [
   {
@@ -43,23 +42,14 @@ const About = () => {
 
         {/* Main Content */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-          {/* Images Grid */}
+          {/* Mission Image */}
           <div className="relative">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-card">
-                <img 
-                  src={communityImage} 
-                  alt="Hadin Kai Community elders in traditional attire" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-card mt-8">
-                <img 
-                  src={meetingImage} 
-                  alt="Hadin Kai Community meeting and gathering" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <div className="aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-card">
+              <img
+                src={communityLordMayor}
+                alt="Hadin Kai Community with the Lord Mayor"
+                className="w-full h-full object-cover"
+              />
             </div>
             {/* Decorative accent */}
             <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl bg-secondary/20 -z-10" />
