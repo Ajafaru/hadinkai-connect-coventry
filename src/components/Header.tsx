@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -28,14 +29,16 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-heading font-bold text-xl">HK</span>
-            </div>
+            <img 
+              src={logo} 
+              alt="Hadin Kai Community Logo - Together we build, Together we benefit" 
+              className="w-14 h-14 rounded-full object-cover"
+            />
             <div className="hidden sm:block">
               <h1 className="font-heading font-semibold text-lg text-foreground leading-tight">
                 Hadin Kai
               </h1>
-              <p className="text-xs text-muted-foreground">Community Coventry</p>
+              <p className="text-xs text-muted-foreground">Together We Build</p>
             </div>
           </div>
 

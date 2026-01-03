@@ -1,4 +1,5 @@
-import { Crown, Heart } from "lucide-react";
+import { Heart, Mail, Phone } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,9 +19,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center">
-                <Crown className="w-6 h-6 text-secondary" />
-              </div>
+              <img 
+                src={logo} 
+                alt="Hadin Kai Community Logo" 
+                className="w-14 h-14 rounded-full object-cover bg-primary-foreground/10"
+              />
               <div>
                 <h3 className="font-heading text-xl font-bold">Hadin Kai Community</h3>
                 <p className="text-sm text-primary-foreground/70">Coventry</p>
@@ -33,7 +36,7 @@ const Footer = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 border border-primary-foreground/20">
               <span className="text-secondary font-semibold">Hadin Kai</span>
               <span className="text-primary-foreground/70">–</span>
-              <span className="text-primary-foreground italic">Strength in Unity</span>
+              <span className="text-primary-foreground italic">Together We Build, Together We Benefit</span>
             </div>
           </div>
 
@@ -54,11 +57,29 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Community */}
+          {/* Contact Info */}
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-4">Community</h4>
+            <h4 className="font-heading text-lg font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-3">
               <li>
+                <a 
+                  href="mailto:Hadinkai2024@gmail.com" 
+                  className="flex items-center gap-2 text-primary-foreground/70 hover:text-secondary transition-colors"
+                >
+                  <Mail className="w-4 h-4" />
+                  Hadinkai2024@gmail.com
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="tel:+447564499627" 
+                  className="flex items-center gap-2 text-primary-foreground/70 hover:text-secondary transition-colors"
+                >
+                  <Phone className="w-4 h-4" />
+                  +44 7564 499627
+                </a>
+              </li>
+              <li className="pt-4">
                 <a href="#" className="text-primary-foreground/70 hover:text-secondary transition-colors">
                   Become a Member
                 </a>
@@ -71,11 +92,6 @@ const Footer = () => {
               <li>
                 <a href="#" className="text-primary-foreground/70 hover:text-secondary transition-colors">
                   Donate
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-primary-foreground/70 hover:text-secondary transition-colors">
-                  Partner With Us
                 </a>
               </li>
             </ul>

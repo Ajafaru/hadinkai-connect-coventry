@@ -1,5 +1,6 @@
 import { Shield, Heart, Users, Globe } from "lucide-react";
-import communityImage from "@/assets/community-gathering.jpg";
+import communityImage from "@/assets/community-elders.jpg";
+import meetingImage from "@/assets/community-meeting.jpg";
 
 const values = [
   {
@@ -42,14 +43,23 @@ const About = () => {
 
         {/* Main Content */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-          {/* Image */}
+          {/* Images Grid */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-card">
-              <img 
-                src={communityImage} 
-                alt="Hadin Kai Community gathering and celebration" 
-                className="w-full h-full object-cover"
-              />
+            <div className="grid grid-cols-2 gap-4">
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-card">
+                <img 
+                  src={communityImage} 
+                  alt="Hadin Kai Community elders in traditional attire" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-card mt-8">
+                <img 
+                  src={meetingImage} 
+                  alt="Hadin Kai Community meeting and gathering" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
             {/* Decorative accent */}
             <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl bg-secondary/20 -z-10" />
@@ -83,7 +93,7 @@ const About = () => {
             <div className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/5 border border-primary/20">
               <span className="text-secondary font-heading font-semibold text-lg">Hadin Kai</span>
               <span className="text-muted-foreground">–</span>
-              <span className="text-foreground italic">"Strength in Unity"</span>
+              <span className="text-foreground italic">"Together We Build, Together We Benefit"</span>
             </div>
           </div>
         </div>

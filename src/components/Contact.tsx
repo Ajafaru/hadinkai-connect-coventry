@@ -131,24 +131,30 @@ const Contact = () => {
                 Contact Information
               </h3>
               <div className="space-y-4">
-                <div className="flex items-start gap-4 p-4 rounded-xl bg-background border border-border">
+                <a 
+                  href="mailto:Hadinkai2024@gmail.com"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-background border border-border hover:border-primary/50 transition-colors"
+                >
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Email</h4>
-                    <p className="text-muted-foreground">info@hadinkaicoventry.org</p>
+                    <p className="text-muted-foreground">Hadinkai2024@gmail.com</p>
                   </div>
-                </div>
-                <div className="flex items-start gap-4 p-4 rounded-xl bg-background border border-border">
+                </a>
+                <a 
+                  href="tel:+447564499627"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-background border border-border hover:border-secondary/50 transition-colors"
+                >
                   <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Phone</h4>
-                    <p className="text-muted-foreground">+44 (0) 7XXX XXX XXX</p>
+                    <p className="text-muted-foreground">+44 7564 499627</p>
                   </div>
-                </div>
+                </a>
                 <div className="flex items-start gap-4 p-4 rounded-xl bg-background border border-border">
                   <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-accent" />

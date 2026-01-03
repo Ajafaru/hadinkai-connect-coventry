@@ -1,6 +1,6 @@
 import { ArrowRight, Users, Heart, Crown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-community.jpg";
+import heroImage from "@/assets/community-lord-mayor.jpg";
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img 
           src={heroImage} 
-          alt="Hadin Kai Community members united together" 
+          alt="Hadin Kai Community members with His Highness Sarkin Zango Coventry and distinguished guests" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70" />
@@ -34,7 +34,7 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 mb-8 animate-fade-up backdrop-blur-sm">
             <Crown className="w-4 h-4 text-secondary" />
-            <span className="text-sm font-medium text-primary-foreground">Unity • Culture • Leadership • Progress</span>
+            <span className="text-sm font-medium text-primary-foreground">Together We Build • Together We Benefit</span>
           </div>
 
           {/* Main Heading */}
