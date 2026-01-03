@@ -1,5 +1,7 @@
 import { Calendar, GraduationCap, HandHeart, Globe, Music, Users } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import youthStudy from "@/assets/youth-study.jpg";
+import youthGathering from "@/assets/youth-gathering.jpg";
 
 const programs = [
   {
@@ -63,6 +65,36 @@ const Programs = () => {
             Discover the diverse range of programs and activities that strengthen our community bonds 
             and create positive impact.
           </p>
+        </div>
+
+        {/* Youth Programs Image Gallery */}
+        <div className="mb-16">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="relative rounded-2xl overflow-hidden shadow-card aspect-video">
+              <img 
+                src={youthStudy} 
+                alt="Youth education and study program at Hadin Kai Community" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="font-heading text-lg font-semibold text-primary-foreground">Youth Education</h4>
+                <p className="text-primary-foreground/80 text-sm">Empowering the next generation through learning</p>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-card aspect-video">
+              <img 
+                src={youthGathering} 
+                alt="Youth gathering and community session at Hadin Kai Community" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="font-heading text-lg font-semibold text-primary-foreground">Community Sessions</h4>
+                <p className="text-primary-foreground/80 text-sm">Building bonds across generations</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Programs Grid */}

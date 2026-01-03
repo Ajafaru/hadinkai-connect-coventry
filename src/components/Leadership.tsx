@@ -1,5 +1,6 @@
 import { Crown, Award, Users } from "lucide-react";
-import leaderImage from "@/assets/leader-portrait.jpg";
+import leaderImage from "@/assets/sarkin-zango-portrait.jpg";
+import throneImage from "@/assets/sarkin-zango-throne.jpg";
 
 const Leadership = () => {
   return (
@@ -20,26 +21,33 @@ const Leadership = () => {
         </div>
 
         {/* Leader Profile */}
-        <div className="max-w-4xl mx-auto mb-16">
+        <div className="max-w-5xl mx-auto mb-16">
           <div className="relative bg-gradient-to-br from-primary/5 to-secondary/5 rounded-3xl p-8 md:p-12 border border-border overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-secondary/10 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
             
-            <div className="relative flex flex-col md:flex-row items-center gap-8">
-              {/* Photo */}
-              <div className="flex-shrink-0">
-                <div className="w-48 h-56 rounded-2xl overflow-hidden shadow-card">
+            <div className="relative flex flex-col lg:flex-row items-center gap-8">
+              {/* Photos */}
+              <div className="flex-shrink-0 flex gap-4">
+                <div className="w-48 h-64 rounded-2xl overflow-hidden shadow-card">
                   <img 
                     src={leaderImage} 
-                    alt="His Highness, Alhaji Ali Umar Abass - Sarkin Zango Coventry" 
+                    alt="His Highness, Alhaji Ali Umar Abass - Sarkin Zango Coventry in traditional regalia" 
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="hidden md:block w-48 h-64 rounded-2xl overflow-hidden shadow-card mt-8">
+                  <img 
+                    src={throneImage} 
+                    alt="His Highness, Alhaji Ali Umar Abass seated at a community event" 
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
               </div>
 
               {/* Info */}
-              <div className="text-center md:text-left">
+              <div className="text-center lg:text-left">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 mb-4">
                   <Award className="w-4 h-4 text-secondary" />
                   <span className="text-sm font-medium text-secondary">Community Leader</span>
@@ -56,6 +64,11 @@ const Leadership = () => {
                   in Coventry. Under his wise guidance, Hadin Kai Community has flourished, 
                   becoming a beacon of unity, cultural preservation, and community development 
                   in the diaspora.
+                </p>
+                <p className="text-muted-foreground leading-relaxed max-w-xl mt-4">
+                  His Highness continues to work tirelessly to strengthen bonds between community 
+                  members, foster youth empowerment, and maintain strong connections with our 
+                  homeland while embracing the opportunities of life in the United Kingdom.
                 </p>
               </div>
             </div>
