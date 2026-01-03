@@ -22,7 +22,7 @@ const Footer = () => {
               <img 
                 src={logo} 
                 alt="Hadin Kai Community Logo" 
-                className="w-14 h-14 rounded-full object-cover bg-primary-foreground/10"
+                className="w-20 h-20 object-contain bg-primary-foreground rounded-lg p-1"
               />
               <div>
                 <h3 className="font-heading text-xl font-bold">Hadin Kai Community</h3>
