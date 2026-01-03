@@ -8,6 +8,7 @@ const navLinks = [
   { label: "About Us", href: "#about" },
   { label: "Programs", href: "#programs" },
   { label: "Leadership", href: "#leadership" },
+  { label: "Gallery", href: "#gallery" },
   { label: "News", href: "#news" },
   { label: "Contact", href: "#contact" },
 ];
@@ -32,13 +33,13 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Hadin Kai Community Logo - Together we build, Together we benefit" 
-              className="w-14 h-14 rounded-full object-cover"
+              className="w-16 h-16 object-contain"
             />
             <div className="hidden sm:block">
               <h1 className="font-heading font-semibold text-lg text-foreground leading-tight">
                 Hadin Kai
               </h1>
-              <p className="text-xs text-muted-foreground">Together We Build</p>
+              <p className="text-xs text-muted-foreground">Community - Coventry</p>
             </div>
           </div>
 
