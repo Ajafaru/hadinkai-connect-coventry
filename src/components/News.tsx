@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import youthSession from "@/assets/youth-session.jpg";
-import communityMeeting from "@/assets/community-meeting.jpg";
+import communityGathering from "@/assets/community-gathering.jpg";
+import sarkinCeremony from "@/assets/sarkin-ceremony.jpg";
+import communityElders from "@/assets/community-elders.jpg";
 
 const newsItems = [
   {
@@ -12,8 +14,8 @@ const newsItems = [
     title: "Annual General Meeting 2026",
     description: "All community members are invited to attend our Annual General Meeting on January 25th. We will review achievements and plan for the year ahead.",
     isNew: true,
-    image: communityMeeting,
-    imageAlt: "Community members gathered for the annual general meeting",
+    image: communityElders,
+    imageAlt: "Community elders gathered for the annual general meeting",
   },
   {
     category: "Event",
@@ -30,6 +32,8 @@ const newsItems = [
     title: "Eid ul-Fitr Celebration",
     description: "Join us for the blessed Eid ul-Fitr celebration with prayers, traditional food, and community fellowship. All families welcome.",
     isNew: true,
+    image: communityGathering,
+    imageAlt: "Community gathering for Eid celebrations and fellowship",
   },
   {
     category: "Community",
@@ -37,6 +41,8 @@ const newsItems = [
     title: "Cultural Heritage Day",
     description: "A day celebrating our rich Zango cultural heritage with traditional music, dance, food, and storytelling for all ages.",
     isNew: false,
+    image: sarkinCeremony,
+    imageAlt: "Cultural heritage celebration with traditional regalia and ceremony",
   },
 ];
 

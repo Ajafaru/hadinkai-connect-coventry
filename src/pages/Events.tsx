@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import youthSession from "@/assets/youth-session.jpg";
-import communityMeeting from "@/assets/community-meeting.jpg";
 import communityGathering from "@/assets/community-gathering.jpg";
 import sarkinCeremony from "@/assets/sarkin-ceremony.jpg";
+import communityElders from "@/assets/community-elders.jpg";
 
 const upcomingEvents = [
   {
@@ -43,8 +43,8 @@ const upcomingEvents = [
     description: "All community members are invited to attend our AGM. We will review achievements and set goals for the year ahead.",
     category: "Meeting",
     isUpcoming: true,
-    image: communityMeeting,
-    imageAlt: "Community members gathered for the annual general meeting",
+    image: communityElders,
+    imageAlt: "Community elders gathered for the annual general meeting",
   },
   {
     id: 4,
@@ -149,7 +149,7 @@ const Events = () => {
                       <img
                         src={event.image}
                         alt={event.imageAlt}
-                        className="h-full w-full object-contain transition-transform duration-300 hover:scale-105"
+                        className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
                         loading="lazy"
                       />
                     </div>
