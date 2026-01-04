@@ -35,7 +35,7 @@ const Leadership = () => {
                 <img 
                   src={leaderImage} 
                   alt="His Highness, Alhaji Ali Umar Abass - Sarkin Zango Coventry in traditional regalia" 
-                  className="w-full h-full object-contain bg-muted/40"
+                  className="w-full h-full object-cover bg-muted/40"
                 />
               </div>
             </div>
@@ -76,7 +76,7 @@ const Leadership = () => {
               <img
                 src={sarkinThrone}
                 alt="Traditional council leadership seated in ceremonial regalia"
-                className="h-full w-full object-contain transition-transform duration-300 hover:scale-105"
+                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
                 loading="lazy"
               />
             </div>
@@ -99,7 +99,7 @@ const Leadership = () => {
               <img
                 src={eldersGathering}
                 alt="Community elders gathered in traditional attire"
-                className="h-full w-full object-contain transition-transform duration-300 hover:scale-105"
+                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
                 loading="lazy"
               />
             </div>
@@ -122,7 +122,7 @@ const Leadership = () => {
               <img
                 src={eldersGathering}
                 alt="Executive committee gathered with community elders"
-                className="h-full w-full object-contain transition-transform duration-300 hover:scale-105"
+                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
                 loading="lazy"
               />
             </div>
