@@ -70,4 +70,9 @@ Yes, you can!
 
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Read more here: [Settin
+
+## Videos of Our Programmes
+
+We are working on adding engaging videos of our programmes to showcase our activities and their impact. Stay tuned for future updates where you will be able to watch highlights from community events directly on our site.
+g up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
