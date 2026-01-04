@@ -2,6 +2,11 @@ import { Calendar, GraduationCap, HandHeart, Globe, Music, Users } from "lucide-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import youthStudy from "@/assets/youth-study.jpg";
 import youthGathering from "@/assets/youth-gathering.jpg";
+import sarkinCeremony from "@/assets/sarkin-ceremony.jpg";
+import youthSession from "@/assets/youth-session.jpg";
+import sarkinWithLeader from "@/assets/sarkin-with-leader.jpg";
+import communityMeeting from "@/assets/community-meeting.jpg";
+import communityGathering from "@/assets/community-gathering.jpg";
 
 const programs = [
   {
@@ -10,6 +15,8 @@ const programs = [
     description: "Annual festivals, Eid celebrations, cultural showcases, and traditional ceremonies that bring our community together.",
     color: "text-secondary",
     bgColor: "bg-secondary/10",
+    image: sarkinCeremony,
+    imageAlt: "Traditional cultural ceremony with community leaders",
   },
   {
     icon: GraduationCap,
@@ -17,6 +24,8 @@ const programs = [
     description: "Educational workshops, mentorship programs, skills training, and leadership development for our young people.",
     color: "text-primary",
     bgColor: "bg-primary/10",
+    image: youthStudy,
+    imageAlt: "Youth education programme with students learning together",
   },
   {
     icon: HandHeart,
@@ -24,6 +33,8 @@ const programs = [
     description: "Welfare assistance, family support services, crisis intervention, and community outreach initiatives.",
     color: "text-accent",
     bgColor: "bg-accent/10",
+    image: communityGathering,
+    imageAlt: "Community members gathering for support and fellowship",
   },
   {
     icon: GraduationCap,
@@ -31,6 +42,8 @@ const programs = [
     description: "Scholarships, study circles, career guidance, and professional development opportunities.",
     color: "text-forest-light",
     bgColor: "bg-primary/10",
+    image: youthSession,
+    imageAlt: "Youth study session with learning materials",
   },
   {
     icon: Globe,
@@ -38,6 +51,8 @@ const programs = [
     description: "Partnerships with communities in Nigeria and across the UK, cultural exchanges, and homeland development projects.",
     color: "text-secondary",
     bgColor: "bg-secondary/10",
+    image: sarkinWithLeader,
+    imageAlt: "Community leaders strengthening diaspora partnerships",
   },
   {
     icon: Users,
@@ -45,6 +60,8 @@ const programs = [
     description: "Regular community meetings, networking events, family days, and recreational activities for all ages.",
     color: "text-accent",
     bgColor: "bg-accent/10",
+    image: communityMeeting,
+    imageAlt: "Community meeting with members engaged in discussion",
   },
 ];
 
@@ -104,6 +121,15 @@ const Programs = () => {
               key={program.title}
               className="group border-border bg-card/80 backdrop-blur-sm hover-lift overflow-hidden"
             >
+              <div className="relative h-40 overflow-hidden">
+                <img
+                  src={program.image}
+                  alt={program.imageAlt}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent" />
+              </div>
               <CardHeader className="pb-4">
                 <div className={`w-14 h-14 rounded-xl ${program.bgColor} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <program.icon className={`w-7 h-7 ${program.color}`} />
