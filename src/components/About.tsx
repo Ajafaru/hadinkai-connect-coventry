@@ -76,7 +76,7 @@ const About = () => {
             <p className="text-muted-foreground leading-relaxed">
               Hadin Kai Community – Coventry was established to unite members of the Zango diaspora 
               living in Coventry and the surrounding areas. Under the distinguished leadership of 
-              His Highness, Alhaji Ali Umar Abass – Sarkin Zango Coventry, we have grown into a 
+              His Highness, Umar Abass Jalloh – Sarkin Zango Coventry, we have grown into a 
               thriving community dedicated to preserving our cultural heritage while embracing progress.
             </p>
             <p className="text-muted-foreground leading-relaxed">

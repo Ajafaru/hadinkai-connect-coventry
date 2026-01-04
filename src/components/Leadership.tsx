@@ -34,7 +34,7 @@ const Leadership = () => {
               <div className="w-56 h-72 md:w-64 md:h-80 rounded-2xl overflow-hidden shadow-card border-4 border-secondary/30">
                 <img 
                   src={leaderImage} 
-                  alt="His Highness, Alhaji Ali Umar Abass - Sarkin Zango Coventry in traditional regalia" 
+                  alt="His Highness, Umar Abass Jalloh - Sarkin Zango Coventry in traditional regalia" 
                   className="w-full h-full object-cover bg-muted/40"
                 />
               </div>
@@ -47,14 +47,14 @@ const Leadership = () => {
                   <span className="text-sm font-medium text-secondary">Community Leader</span>
                 </div>
                 <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-2">
-                  His Highness, Alhaji Ali Umar Abass
+                  His Highness, Umar Abass Jalloh
                 </h3>
                 <p className="text-xl text-primary font-semibold mb-4">
                   Sarkin Zango Coventry
                 </p>
                 <p className="text-muted-foreground leading-relaxed max-w-xl">
                   A distinguished leader and custodian of our cultural heritage, His Highness 
-                  Alhaji Ali Umar Abass has dedicated his life to serving the Zango community 
+                  Umar Abass Jalloh has dedicated his life to serving the Zango community 
                   in Coventry. Under his wise guidance, Hadin Kai Community has flourished, 
                   becoming a beacon of unity, cultural preservation, and community development 
                   in the diaspora.

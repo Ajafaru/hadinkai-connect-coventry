@@ -50,7 +50,7 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            Led by His Highness, Alhaji Ali Umar Abass – Sarkin Zango Coventry, we preserve 
+            Led by His Highness, Umar Abass Jalloh – Sarkin Zango Coventry, we preserve 
             our heritage, empower our youth, and strengthen community bonds across generations.
           </p>
 
