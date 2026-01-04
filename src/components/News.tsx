@@ -1,34 +1,35 @@
 import { Calendar, Bell, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const newsItems = [
   {
     category: "Announcement",
-    date: "December 2024",
-    title: "Annual General Meeting 2024",
-    description: "All community members are invited to attend our Annual General Meeting. We will review the year's achievements and plan for 2025.",
+    date: "January 2026",
+    title: "Annual General Meeting 2026",
+    description: "All community members are invited to attend our Annual General Meeting on January 25th. We will review achievements and plan for the year ahead.",
     isNew: true,
   },
   {
     category: "Event",
-    date: "November 2024",
-    title: "Eid Milad-un-Nabi Celebration",
-    description: "Join us for a blessed gathering to commemorate the birth of Prophet Muhammad (PBUH). Special prayers and community feast included.",
+    date: "February 2026",
+    title: "Youth Leadership Workshop",
+    description: "A special workshop for young community members focusing on leadership skills, career development, and cultural identity.",
     isNew: true,
   },
   {
-    category: "Notice",
-    date: "October 2024",
-    title: "Youth Development Workshop Series",
-    description: "A new series of workshops focused on career development, leadership skills, and cultural awareness for young community members.",
-    isNew: false,
+    category: "Upcoming",
+    date: "March 2026",
+    title: "Eid ul-Fitr Celebration",
+    description: "Join us for the blessed Eid ul-Fitr celebration with prayers, traditional food, and community fellowship. All families welcome.",
+    isNew: true,
   },
   {
     category: "Community",
-    date: "September 2024",
-    title: "Charity Drive for Flood Victims",
-    description: "Our community successfully raised funds to support flood victims in Nigeria. Thank you to all who contributed generously.",
+    date: "April 2026",
+    title: "Cultural Heritage Day",
+    description: "A day celebrating our rich Zango cultural heritage with traditional music, dance, food, and storytelling for all ages.",
     isNew: false,
   },
 ];
@@ -67,7 +68,7 @@ const News = () => {
                         ? "bg-primary/10 text-primary"
                         : item.category === "Event"
                         ? "bg-secondary/20 text-secondary"
-                        : item.category === "Notice"
+                        : item.category === "Upcoming"
                         ? "bg-accent/10 text-accent"
                         : "bg-muted text-muted-foreground"
                     }`}
@@ -76,7 +77,7 @@ const News = () => {
                   </Badge>
                   {item.isNew && (
                     <div className="flex items-center gap-1">
-                      <Bell className="w-3 h-3 text-secondary animate-pulse" />
+                      <Bell className="w-3 h-3 text-secondary animate-pulse" aria-hidden="true" />
                       <span className="text-xs font-medium text-secondary">New</span>
                     </div>
                   )}
@@ -85,7 +86,7 @@ const News = () => {
                   {item.title}
                 </CardTitle>
                 <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                  <Calendar className="w-4 h-4" />
+                  <Calendar className="w-4 h-4" aria-hidden="true" />
                   <span>{item.date}</span>
                 </div>
               </CardHeader>
@@ -95,17 +96,28 @@ const News = () => {
                 </CardDescription>
                 <div className="mt-4 flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                   Read more
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
+        {/* View All Events Link */}
+        <div className="mt-12 text-center">
+          <Link 
+            to="/events"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
+          >
+            View All Events
+            <ArrowRight className="w-4 h-4" aria-hidden="true" />
+          </Link>
+        </div>
+
         {/* Subscribe Banner */}
         <div className="mt-16 max-w-2xl mx-auto">
           <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-border text-center">
-            <Bell className="w-10 h-10 text-secondary mx-auto mb-4" />
+            <Bell className="w-10 h-10 text-secondary mx-auto mb-4" aria-hidden="true" />
             <h3 className="font-heading text-xl font-semibold text-foreground mb-2">
               Never Miss an Update
             </h3>
@@ -117,7 +129,7 @@ const News = () => {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
             >
               Join Mailing List
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </button>
           </div>
         </div>

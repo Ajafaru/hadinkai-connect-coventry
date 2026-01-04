@@ -45,14 +45,13 @@ const Hero = () => {
 
           {/* Tagline */}
           <p className="text-xl md:text-2xl text-primary-foreground/90 font-light mb-4 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            Strengthening Unity, Culture, and Community Leadership
+            Uniting Zango Diaspora in Coventry Through Culture, Education & Service
           </p>
 
           {/* Description */}
           <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            A vibrant cultural and social leadership community in Coventry, united under the 
-            guidance of His Highness, Alhaji Ali Umar Abass – Sarkin Zango Coventry. 
-            Together, we preserve our heritage and build a stronger future.
+            Led by His Highness, Alhaji Ali Umar Abass – Sarkin Zango Coventry, we preserve 
+            our heritage, empower our youth, and strengthen community bonds across generations.
           </p>
 
           {/* CTA Buttons */}
