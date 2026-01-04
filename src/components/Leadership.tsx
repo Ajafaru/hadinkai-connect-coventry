@@ -2,7 +2,6 @@ import { Crown, Award, Users } from "lucide-react";
 import leaderImage from "@/assets/sarkin-zango-portrait.jpg";
 import sarkinThrone from "@/assets/sarkin-zango-throne.jpg";
 import eldersGathering from "@/assets/elders-gathering.jpg";
-import communityMeeting from "@/assets/community-meeting.jpg";
 
 const Leadership = () => {
   return (
@@ -31,15 +30,15 @@ const Leadership = () => {
             
             <div className="relative flex flex-col lg:flex-row items-center gap-8">
               {/* Photo */}
-              <div className="flex-shrink-0">
-                <div className="w-56 h-72 md:w-64 md:h-80 rounded-2xl overflow-hidden shadow-card border-4 border-secondary/30">
-                  <img 
-                    src={leaderImage} 
-                    alt="His Highness, Alhaji Ali Umar Abass - Sarkin Zango Coventry in traditional regalia" 
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
+            <div className="flex-shrink-0">
+              <div className="w-56 h-72 md:w-64 md:h-80 rounded-2xl overflow-hidden shadow-card border-4 border-secondary/30">
+                <img 
+                  src={leaderImage} 
+                  alt="His Highness, Alhaji Ali Umar Abass - Sarkin Zango Coventry in traditional regalia" 
+                  className="w-full h-full object-contain bg-muted/40"
+                />
               </div>
+            </div>
 
               {/* Info */}
               <div className="text-center lg:text-left">
@@ -73,11 +72,11 @@ const Leadership = () => {
         {/* Governance Structure */}
         <div className="grid md:grid-cols-3 gap-6">
           <div className="overflow-hidden rounded-xl bg-background border border-border text-center hover-lift">
-            <div className="h-40 w-full overflow-hidden">
+            <div className="h-40 w-full overflow-hidden bg-muted/40 flex items-center justify-center">
               <img
                 src={sarkinThrone}
                 alt="Traditional council leadership seated in ceremonial regalia"
-                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                className="h-full w-full object-contain transition-transform duration-300 hover:scale-105"
                 loading="lazy"
               />
             </div>
@@ -96,11 +95,11 @@ const Leadership = () => {
           </div>
 
           <div className="overflow-hidden rounded-xl bg-background border border-border text-center hover-lift">
-            <div className="h-40 w-full overflow-hidden">
+            <div className="h-40 w-full overflow-hidden bg-muted/40 flex items-center justify-center">
               <img
                 src={eldersGathering}
                 alt="Community elders gathered in traditional attire"
-                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                className="h-full w-full object-contain transition-transform duration-300 hover:scale-105"
                 loading="lazy"
               />
             </div>
@@ -119,11 +118,11 @@ const Leadership = () => {
           </div>
 
           <div className="overflow-hidden rounded-xl bg-background border border-border text-center hover-lift">
-            <div className="h-40 w-full overflow-hidden">
+            <div className="h-40 w-full overflow-hidden bg-muted/40 flex items-center justify-center">
               <img
-                src={communityMeeting}
-                alt="Executive committee meeting for community planning"
-                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                src={eldersGathering}
+                alt="Executive committee gathered with community elders"
+                className="h-full w-full object-contain transition-transform duration-300 hover:scale-105"
                 loading="lazy"
               />
             </div>

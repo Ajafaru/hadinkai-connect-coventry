@@ -197,13 +197,13 @@ const Gallery = () => {
                   className="group relative w-full overflow-hidden rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                   aria-label={`View ${media.caption}`}
                 >
-                  <div className="aspect-[16/9] md:aspect-[3/2] lg:aspect-[5/2]">
+                  <div className="aspect-[16/9] md:aspect-[3/2] lg:aspect-[5/2] bg-muted/40">
                     {media.type === "image" ? (
                       <img
                         src={media.src}
                         alt={media.alt}
                         loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                       />
                     ) : (
                       <video
@@ -241,42 +241,6 @@ const Gallery = () => {
           <CarouselPrevious className="-left-6" aria-label="Previous slide" />
           <CarouselNext className="-right-6" aria-label="Next slide" />
         </Carousel>
-
-        {/* Thumbnail Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          {galleryMedia.map((media, index) => (
-            <button
-              key={index}
-              onClick={() => openLightbox(media, index)}
-              className="group relative aspect-square rounded-xl overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-              aria-label={`View ${media.caption}`}
-            >
-              {media.type === "image" ? (
-                <img
-                  src={media.src}
-                  alt={media.alt}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-              ) : (
-                <>
-                  <video
-                    src={media.src}
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-10 h-10 rounded-full bg-secondary/90 flex items-center justify-center">
-                      <Play className="w-5 h-5 text-secondary-foreground" />
-                    </div>
-                  </div>
-                </>
-              )}
-              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-colors" />
-            </button>
-          ))}
-        </div>
       </div>
 
       {/* Lightbox Modal */}
