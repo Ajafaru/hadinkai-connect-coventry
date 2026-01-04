@@ -6,6 +6,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import youthSession from "@/assets/youth-session.jpg";
 import communityMeeting from "@/assets/community-meeting.jpg";
+import communityGathering from "@/assets/community-gathering.jpg";
+import sarkinCeremony from "@/assets/sarkin-ceremony.jpg";
 
 const upcomingEvents = [
   {
@@ -17,6 +19,8 @@ const upcomingEvents = [
     description: "Join us for the blessed Eid ul-Fitr celebration with prayers, traditional food, and community fellowship. All families welcome.",
     category: "Religious",
     isUpcoming: true,
+    image: communityGathering,
+    imageAlt: "Community gathering for Eid celebration",
   },
   {
     id: 2,
@@ -51,6 +55,8 @@ const upcomingEvents = [
     description: "A day celebrating our rich Zango cultural heritage with traditional music, dance, food, and storytelling for all ages.",
     category: "Cultural",
     isUpcoming: true,
+    image: sarkinCeremony,
+    imageAlt: "Zango cultural heritage celebration with traditional regalia",
   },
   {
     id: 5,
@@ -139,11 +145,11 @@ const Events = () => {
               {upcomingEvents.map((event) => (
                 <Card key={event.id} className="border-border bg-card hover-lift overflow-hidden">
                   {event.image && (
-                    <div className="h-40 w-full overflow-hidden">
+                    <div className="h-40 w-full overflow-hidden bg-muted/40 flex items-center justify-center">
                       <img
                         src={event.image}
                         alt={event.imageAlt}
-                        className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                        className="h-full w-full object-contain transition-transform duration-300 hover:scale-105"
                         loading="lazy"
                       />
                     </div>
