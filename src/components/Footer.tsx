@@ -1,4 +1,5 @@
 import { Heart, Mail, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -44,20 +45,28 @@ const Footer = () => {
           <div>
             <h4 className="font-heading text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-3">
-              {["Home", "About Us", "Programs", "Leadership", "News", "Contact"].map((link) => (
+              {["Home", "About", "Programs", "Leadership", "Gallery", "Contact"].map((link) => (
                 <li key={link}>
                   <button
-                    onClick={() => scrollToSection(`#${link.toLowerCase().replace(" ", "-").replace("about-us", "about")}`)}
+                    onClick={() => scrollToSection(`#${link.toLowerCase()}`)}
                     className="text-primary-foreground/70 hover:text-secondary transition-colors"
                   >
                     {link}
                   </button>
                 </li>
               ))}
+              <li>
+                <Link 
+                  to="/events" 
+                  className="text-primary-foreground/70 hover:text-secondary transition-colors"
+                >
+                  Events
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact & Actions */}
           <div>
             <h4 className="font-heading text-lg font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-3">
@@ -80,19 +89,20 @@ const Footer = () => {
                 </a>
               </li>
               <li className="pt-4">
-                <a href="#" className="text-primary-foreground/70 hover:text-secondary transition-colors">
-                  Become a Member
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-primary-foreground/70 hover:text-secondary transition-colors">
+                <Link 
+                  to="/volunteer" 
+                  className="text-primary-foreground/70 hover:text-secondary transition-colors"
+                >
                   Volunteer With Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/70 hover:text-secondary transition-colors">
+                <Link 
+                  to="/donate" 
+                  className="text-primary-foreground/70 hover:text-secondary transition-colors"
+                >
                   Donate
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -106,8 +116,22 @@ const Footer = () => {
             <p className="text-primary-foreground/60">
               © {currentYear} Hadin Kai Community – Coventry. All rights reserved.
             </p>
+            <div className="flex items-center gap-4">
+              <Link 
+                to="/privacy" 
+                className="text-primary-foreground/60 hover:text-secondary transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <Link 
+                to="/terms" 
+                className="text-primary-foreground/60 hover:text-secondary transition-colors"
+              >
+                Terms of Use
+              </Link>
+            </div>
             <p className="flex items-center gap-1 text-primary-foreground/60">
-              Made with <Heart className="w-4 h-4 text-accent fill-current" /> for our community
+              Made with <Heart className="w-4 h-4 text-accent fill-current" aria-hidden="true" /> for our community
             </p>
           </div>
         </div>
