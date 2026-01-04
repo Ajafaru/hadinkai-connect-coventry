@@ -1,5 +1,8 @@
 import { Crown, Award, Users } from "lucide-react";
 import leaderImage from "@/assets/sarkin-zango-portrait.jpg";
+import sarkinThrone from "@/assets/sarkin-zango-throne.jpg";
+import eldersGathering from "@/assets/elders-gathering.jpg";
+import communityMeeting from "@/assets/community-meeting.jpg";
 
 const Leadership = () => {
   return (
@@ -69,43 +72,73 @@ const Leadership = () => {
 
         {/* Governance Structure */}
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="p-6 rounded-xl bg-background border border-border text-center hover-lift">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-              <Crown className="w-8 h-8 text-primary" />
+          <div className="overflow-hidden rounded-xl bg-background border border-border text-center hover-lift">
+            <div className="h-40 w-full overflow-hidden">
+              <img
+                src={sarkinThrone}
+                alt="Traditional council leadership seated in ceremonial regalia"
+                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                loading="lazy"
+              />
             </div>
-            <h4 className="font-heading text-lg font-semibold text-foreground mb-2">
-              Traditional Council
-            </h4>
-            <p className="text-muted-foreground text-sm">
-              The Sarkin Zango and senior title holders who provide cultural 
-              guidance and maintain traditional protocols.
-            </p>
+            <div className="p-6">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                <Crown className="w-8 h-8 text-primary" />
+              </div>
+              <h4 className="font-heading text-lg font-semibold text-foreground mb-2">
+                Traditional Council
+              </h4>
+              <p className="text-muted-foreground text-sm">
+                The Sarkin Zango and senior title holders who provide cultural 
+                guidance and maintain traditional protocols.
+              </p>
+            </div>
           </div>
 
-          <div className="p-6 rounded-xl bg-background border border-border text-center hover-lift">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
-              <Users className="w-8 h-8 text-secondary" />
+          <div className="overflow-hidden rounded-xl bg-background border border-border text-center hover-lift">
+            <div className="h-40 w-full overflow-hidden">
+              <img
+                src={eldersGathering}
+                alt="Community elders gathered in traditional attire"
+                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                loading="lazy"
+              />
             </div>
-            <h4 className="font-heading text-lg font-semibold text-foreground mb-2">
-              Community Elders
-            </h4>
-            <p className="text-muted-foreground text-sm">
-              Respected members who advise on community matters, mediate disputes, 
-              and ensure traditions are upheld.
-            </p>
+            <div className="p-6">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
+                <Users className="w-8 h-8 text-secondary" />
+              </div>
+              <h4 className="font-heading text-lg font-semibold text-foreground mb-2">
+                Community Elders
+              </h4>
+              <p className="text-muted-foreground text-sm">
+                Respected members who advise on community matters, mediate disputes, 
+                and ensure traditions are upheld.
+              </p>
+            </div>
           </div>
 
-          <div className="p-6 rounded-xl bg-background border border-border text-center hover-lift">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-accent/10 flex items-center justify-center">
-              <Award className="w-8 h-8 text-accent" />
+          <div className="overflow-hidden rounded-xl bg-background border border-border text-center hover-lift">
+            <div className="h-40 w-full overflow-hidden">
+              <img
+                src={communityMeeting}
+                alt="Executive committee meeting for community planning"
+                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                loading="lazy"
+              />
             </div>
-            <h4 className="font-heading text-lg font-semibold text-foreground mb-2">
-              Executive Committee
-            </h4>
-            <p className="text-muted-foreground text-sm">
-              Elected representatives who handle day-to-day administration, 
-              organize events, and manage community resources.
-            </p>
+            <div className="p-6">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-accent/10 flex items-center justify-center">
+                <Award className="w-8 h-8 text-accent" />
+              </div>
+              <h4 className="font-heading text-lg font-semibold text-foreground mb-2">
+                Executive Committee
+              </h4>
+              <p className="text-muted-foreground text-sm">
+                Elected representatives who handle day-to-day administration, 
+                organize events, and manage community resources.
+              </p>
+            </div>
           </div>
         </div>
       </div>

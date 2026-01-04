@@ -1,26 +1,38 @@
 import { Shield, Heart, Users, Globe } from "lucide-react";
 import communityLordMayor from "@/assets/community-lord-mayor.jpg";
+import sarkinWithElder from "@/assets/sarkin-with-elder.jpg";
+import communityGathering from "@/assets/community-gathering.jpg";
+import sarkinCeremony from "@/assets/sarkin-ceremony.jpg";
+import communityMeeting from "@/assets/community-meeting.jpg";
 
 const values = [
   {
     icon: Shield,
     title: "Respect",
     description: "Honouring our traditions and treating every community member with dignity.",
+    image: sarkinWithElder,
+    imageAlt: "Community leader showing respect during a traditional gathering",
   },
   {
     icon: Heart,
     title: "Peace",
     description: "Fostering harmony within our community and with our neighbours.",
+    image: communityGathering,
+    imageAlt: "Community members gathering in unity and peace",
   },
   {
     icon: Users,
     title: "Cultural Heritage",
     description: "Preserving and celebrating our rich Zango cultural traditions.",
+    image: sarkinCeremony,
+    imageAlt: "Traditional cultural ceremony celebrating heritage",
   },
   {
     icon: Globe,
     title: "Community Support",
     description: "Standing together to uplift and empower every member.",
+    image: communityMeeting,
+    imageAlt: "Community members meeting to support one another",
   },
 ];
 
@@ -96,6 +108,14 @@ const About = () => {
               className="group p-6 rounded-xl bg-background hover-lift border border-border"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
+              <div className="mb-4 overflow-hidden rounded-lg">
+                <img
+                  src={value.image}
+                  alt={value.imageAlt}
+                  className="h-36 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
               <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <value.icon className="w-7 h-7 text-primary" />
               </div>

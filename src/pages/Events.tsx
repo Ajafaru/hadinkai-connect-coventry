@@ -4,6 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import youthSession from "@/assets/youth-session.jpg";
+import communityMeeting from "@/assets/community-meeting.jpg";
 
 const upcomingEvents = [
   {
@@ -25,6 +27,8 @@ const upcomingEvents = [
     description: "A special workshop for young community members focusing on leadership skills, career development, and cultural identity.",
     category: "Education",
     isUpcoming: true,
+    image: youthSession,
+    imageAlt: "Young community members in a leadership workshop session",
   },
   {
     id: 3,
@@ -35,6 +39,8 @@ const upcomingEvents = [
     description: "All community members are invited to attend our AGM. We will review achievements and set goals for the year ahead.",
     category: "Meeting",
     isUpcoming: true,
+    image: communityMeeting,
+    imageAlt: "Community members gathered for the annual general meeting",
   },
   {
     id: 4,
@@ -132,6 +138,16 @@ const Events = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {upcomingEvents.map((event) => (
                 <Card key={event.id} className="border-border bg-card hover-lift overflow-hidden">
+                  {event.image && (
+                    <div className="h-40 w-full overflow-hidden">
+                      <img
+                        src={event.image}
+                        alt={event.imageAlt}
+                        className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between mb-2">
                       <Badge className={getCategoryColor(event.category)}>

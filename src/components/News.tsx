@@ -2,6 +2,8 @@ import { Calendar, Bell, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import youthSession from "@/assets/youth-session.jpg";
+import communityMeeting from "@/assets/community-meeting.jpg";
 
 const newsItems = [
   {
@@ -10,6 +12,8 @@ const newsItems = [
     title: "Annual General Meeting 2026",
     description: "All community members are invited to attend our Annual General Meeting on January 25th. We will review achievements and plan for the year ahead.",
     isNew: true,
+    image: communityMeeting,
+    imageAlt: "Community members gathered for the annual general meeting",
   },
   {
     category: "Event",
@@ -17,6 +21,8 @@ const newsItems = [
     title: "Youth Leadership Workshop",
     description: "A special workshop for young community members focusing on leadership skills, career development, and cultural identity.",
     isNew: true,
+    image: youthSession,
+    imageAlt: "Youth leadership workshop with participants learning together",
   },
   {
     category: "Upcoming",
@@ -59,6 +65,16 @@ const News = () => {
               key={index}
               className="group border-border bg-card hover-lift overflow-hidden cursor-pointer"
             >
+              {item.image && (
+                <div className="h-40 w-full overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.imageAlt}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+              )}
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between mb-2">
                   <Badge
