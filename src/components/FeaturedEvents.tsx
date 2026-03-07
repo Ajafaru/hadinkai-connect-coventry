@@ -1,4 +1,5 @@
-import { Calendar, MapPin, Clock, Star, ArrowRight } from "lucide-react";
+import { useState, useRef } from "react";
+import { Calendar, MapPin, Clock, Star, ArrowRight, Play } from "lucide-react";
 import ramadanPoster from "@/assets/ramadan-iftar-poster.jpg";
 import ramadanMubarakSarkin from "@/assets/ramadan-mubarak-sarkin.jpg";
 import eidLeadersPanel from "@/assets/eid-leaders-panel.jpg";
@@ -9,6 +10,15 @@ import ghanaIndependenceLordMayor from "@/assets/ghana-independence-lord-mayor.j
 import ghanaIndependenceGroup from "@/assets/ghana-independence-group.jpg";
 
 const FeaturedEvents = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
   return (
     <section id="featured-events" className="py-24 bg-card">
       <div className="container mx-auto px-4">
@@ -148,15 +158,29 @@ const FeaturedEvents = () => {
                   loading="lazy"
                 />
                 <div className="p-4 bg-gradient-to-t from-[hsl(160,40%,10%)] to-[hsl(160,40%,15%)]/80">
-                  <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-secondary/20">
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-secondary/20">
                     <video
+                      ref={videoRef}
                       src="/videos/ramadan-iftar-2026.mp4"
-                      controls
+                      controls={isPlaying}
                       preload="metadata"
                       className="w-full object-cover"
+                      onPause={() => setIsPlaying(false)}
+                      onPlay={() => setIsPlaying(true)}
                     >
                       Your browser does not support the video tag.
                     </video>
+                    {!isPlaying && (
+                      <button
+                        onClick={handlePlay}
+                        className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/20 transition-colors cursor-pointer group"
+                        aria-label="Play video"
+                      >
+                        <div className="w-20 h-20 rounded-full bg-[hsl(25,90%,55%)] flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+                          <Play className="w-9 h-9 text-white fill-white ml-1" />
+                        </div>
+                      </button>
+                    )}
                   </div>
                   <p className="text-white/60 text-sm text-center mt-3 font-medium tracking-wide">
                     🎥 Ramadan Iftar Highlights
