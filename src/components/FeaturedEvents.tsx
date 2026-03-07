@@ -76,6 +76,15 @@ const FeaturedEvents = () => {
           </div>
         </div>
 
+        {/* Divider */}
+        <div className="flex items-center justify-center gap-4 my-2">
+          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
+          <div className="w-2 h-2 rounded-full bg-secondary/40" />
+          <div className="w-3 h-3 rounded-full bg-secondary/60" />
+          <div className="w-2 h-2 rounded-full bg-secondary/40" />
+          <div className="h-px flex-1 bg-gradient-to-l from-transparent via-secondary/30 to-transparent" />
+        </div>
+
         {/* ===== RAMADAN IFTAR 2026 ===== */}
         <div className="mb-20">
           <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[hsl(160,40%,15%)] to-[hsl(200,50%,10%)] shadow-2xl">
@@ -160,6 +169,15 @@ const FeaturedEvents = () => {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Divider */}
+        <div className="flex items-center justify-center gap-4 my-2">
+          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
+          <div className="w-2 h-2 rounded-full bg-secondary/40" />
+          <div className="w-3 h-3 rounded-full bg-secondary/60" />
+          <div className="w-2 h-2 rounded-full bg-secondary/40" />
+          <div className="h-px flex-1 bg-gradient-to-l from-transparent via-secondary/30 to-transparent" />
         </div>
 
         {/* ===== GHANA'S 79TH INDEPENDENCE ===== */}
