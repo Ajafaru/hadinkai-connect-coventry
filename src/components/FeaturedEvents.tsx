@@ -139,14 +139,23 @@ const FeaturedEvents = () => {
                 </div>
               </div>
 
-              {/* Right: Poster image */}
-              <div className="relative">
+              {/* Right: Poster & Video */}
+              <div className="relative flex flex-col">
                 <img
                   src={ramadanPoster}
                   alt="Ramadan Iftar 2026 official invitation poster by Hadin Kai Community"
-                  className="w-full h-full object-cover min-h-[400px]"
+                  className="w-full object-cover min-h-[250px] flex-1"
                   loading="lazy"
                 />
+                <video
+                  src="/videos/ramadan-iftar-2026.mp4"
+                  controls
+                  preload="metadata"
+                  className="w-full object-cover"
+                  poster=""
+                >
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
 
