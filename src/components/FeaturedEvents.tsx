@@ -1,5 +1,6 @@
 import { Calendar, MapPin, Clock, Star, ArrowRight } from "lucide-react";
 import ramadanPoster from "@/assets/ramadan-iftar-poster.jpg";
+import ramadanMubarakSarkin from "@/assets/ramadan-mubarak-sarkin.jpg";
 import eidLeadersPanel from "@/assets/eid-leaders-panel.jpg";
 import iftarDinnerServing from "@/assets/iftar-dinner-serving.jpg";
 import iftarMealSharing from "@/assets/iftar-meal-sharing.jpg";
@@ -20,6 +21,59 @@ const FeaturedEvents = () => {
             Community Highlights
           </h2>
           <div className="section-divider mb-6" />
+        </div>
+
+        {/* ===== RAMADAN MUBARAK - SARKIN ZANGO ===== */}
+        <div className="mb-20">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+            {/* Background gradient */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,50%,12%)] via-[hsl(210,45%,18%)] to-[hsl(200,40%,10%)]" />
+            {/* Decorative gold top */}
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[hsl(45,80%,50%)] via-[hsl(38,90%,60%)] to-[hsl(45,80%,50%)]" />
+
+            <div className="relative grid lg:grid-cols-2 gap-0">
+              {/* Left: Sarkin Zango Image */}
+              <div className="relative flex items-center justify-center p-6 md:p-10">
+                <img
+                  src={ramadanMubarakSarkin}
+                  alt="Sarkin Zango Coventry, Mai Martaba Alhaji Umar Abass, wishing Ramadan Mubarak"
+                  className="w-full max-w-md rounded-2xl shadow-2xl object-cover"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Right: Message */}
+              <div className="relative p-8 md:p-12 flex flex-col justify-center">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[hsl(45,80%,50%)]/20 text-[hsl(45,80%,65%)] text-sm font-semibold mb-6 w-fit">
+                  <Star className="w-4 h-4" />
+                  Ramadan Mubarak
+                </div>
+                <h3 className="font-heading text-3xl md:text-4xl font-bold text-white mb-3 leading-tight">
+                  Ramadan Mubarak
+                </h3>
+                <p className="text-[hsl(45,80%,65%)] text-lg font-semibold mb-2">
+                  Sarkin Zango Coventry
+                </p>
+                <p className="text-white font-bold text-xl mb-6">
+                  Mai Martaba Alhaji Umar Abass
+                </p>
+                <p className="text-white/80 text-lg mb-4 leading-relaxed italic">
+                  "May Allah's blessings fill your life with happiness and open all the doors of success. 
+                  May your fasting be accepted, your prayers answered, and your heart filled with peace."
+                </p>
+                <p className="text-white/70 leading-relaxed">
+                  Wishing you and your family a Ramadan full of Joy, Devotion and Prosperity.
+                </p>
+                <div className="mt-8 h-px bg-gradient-to-r from-transparent via-[hsl(45,80%,50%)]/40 to-transparent" />
+                <p className="mt-4 text-[hsl(45,80%,65%)] text-sm font-medium text-center">
+                  Happy Ramadan from the Hadin Kai Community
+                </p>
+              </div>
+            </div>
+
+            {/* Bottom gold bar */}
+            <div className="h-1.5 bg-gradient-to-r from-[hsl(45,80%,50%)] via-[hsl(38,90%,60%)] to-[hsl(45,80%,50%)]" />
+          </div>
         </div>
 
         {/* ===== RAMADAN IFTAR 2026 ===== */}
