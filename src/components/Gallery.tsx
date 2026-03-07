@@ -11,6 +11,15 @@ import eldersGathering from "@/assets/elders-gathering.jpg";
 import sarkinCeremony from "@/assets/sarkin-ceremony.jpg";
 import sarkinWithElder from "@/assets/sarkin-with-elder.jpg";
 import sarkinWithLeader from "@/assets/sarkin-with-leader.jpg";
+import eidLeadersPanel from "@/assets/eid-leaders-panel.jpg";
+import iftarDinnerServing from "@/assets/iftar-dinner-serving.jpg";
+import iftarDinnerGathering from "@/assets/iftar-dinner-gathering.jpg";
+import prayerGathering from "@/assets/prayer-gathering.jpg";
+import eidMubarakElders from "@/assets/eid-mubarak-elders.jpg";
+import prayerSession from "@/assets/prayer-session.jpg";
+import iftarMealSharing from "@/assets/iftar-meal-sharing.jpg";
+import ghanaIndependenceGroup from "@/assets/ghana-independence-group.jpg";
+import ghanaIndependenceLordMayor from "@/assets/ghana-independence-lord-mayor.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -30,15 +39,75 @@ type MediaItem = {
 const galleryMedia: MediaItem[] = [
   {
     type: "image",
-    src: communityLordMayor,
-    alt: "Hadin Kai Community meeting with the Lord Mayor of Coventry",
-    caption: "Community Leaders with the Lord Mayor",
+    src: ghanaIndependenceLordMayor,
+    alt: "Hadin Kai community members with the Lord Mayor at Ghana's 79th Independence celebration in Coventry",
+    caption: "Ghana's 79th Independence – With the Lord Mayor",
+  },
+  {
+    type: "image",
+    src: eidLeadersPanel,
+    alt: "Community leaders speaking at Eid Mubarak celebration with decorative backdrop",
+    caption: "Eid Mubarak – Leaders Panel Address",
+  },
+  {
+    type: "image",
+    src: iftarDinnerServing,
+    alt: "Community members being served food at Ramadan Iftar dinner",
+    caption: "Ramadan Iftar – Community Dinner",
   },
   {
     type: "video",
     src: "/videos/community-event-1.mp4",
     alt: "Community celebration event video",
     caption: "Community Celebration Highlights",
+  },
+  {
+    type: "image",
+    src: ghanaIndependenceGroup,
+    alt: "Hadin Kai delegation at Ghana's 79th Independence Day event in traditional attire",
+    caption: "Ghana Independence – Community Delegation",
+  },
+  {
+    type: "image",
+    src: prayerSession,
+    alt: "Community members and youth in prayer during Ramadan gathering",
+    caption: "Ramadan – Community Prayer Session",
+  },
+  {
+    type: "image",
+    src: communityLordMayor,
+    alt: "Hadin Kai Community meeting with the Lord Mayor of Coventry",
+    caption: "Community Leaders with the Lord Mayor",
+  },
+  {
+    type: "image",
+    src: eidMubarakElders,
+    alt: "Elders seated at Eid Mubarak celebration with prayer beads",
+    caption: "Eid Mubarak – Elders in Reflection",
+  },
+  {
+    type: "image",
+    src: iftarDinnerGathering,
+    alt: "Community members gathered around table for Iftar meal",
+    caption: "Ramadan Iftar – Fellowship & Food",
+  },
+  {
+    type: "video",
+    src: "/videos/community-event-2.mp4",
+    alt: "Cultural event video from community gathering",
+    caption: "Cultural Event Moments",
+  },
+  {
+    type: "image",
+    src: prayerGathering,
+    alt: "Youth and elders seated on prayer mats during community gathering",
+    caption: "Community Prayer Gathering",
+  },
+  {
+    type: "image",
+    src: iftarMealSharing,
+    alt: "Three community members sharing Iftar meal together",
+    caption: "Ramadan Iftar – Sharing Meals Together",
   },
   {
     type: "image",
@@ -51,12 +120,6 @@ const galleryMedia: MediaItem[] = [
     src: communityElders,
     alt: "Respected community elders gathering for discussion",
     caption: "Our Respected Elders",
-  },
-  {
-    type: "video",
-    src: "/videos/community-event-2.mp4",
-    alt: "Cultural event video from community gathering",
-    caption: "Cultural Event Moments",
   },
   {
     type: "image",
