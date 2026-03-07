@@ -10,6 +10,15 @@ import ghanaIndependenceLordMayor from "@/assets/ghana-independence-lord-mayor.j
 import ghanaIndependenceGroup from "@/assets/ghana-independence-group.jpg";
 
 const FeaturedEvents = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
   return (
     <section id="featured-events" className="py-24 bg-card">
       <div className="container mx-auto px-4">
