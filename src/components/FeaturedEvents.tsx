@@ -1,4 +1,5 @@
-import { Calendar, MapPin, Clock, Star, ArrowRight } from "lucide-react";
+import { useState, useRef } from "react";
+import { Calendar, MapPin, Clock, Star, ArrowRight, Play } from "lucide-react";
 import ramadanPoster from "@/assets/ramadan-iftar-poster.jpg";
 import ramadanMubarakSarkin from "@/assets/ramadan-mubarak-sarkin.jpg";
 import eidLeadersPanel from "@/assets/eid-leaders-panel.jpg";
