@@ -304,6 +304,31 @@ const Gallery = () => {
           <CarouselPrevious className="-left-6" aria-label="Previous slide" />
           <CarouselNext className="-right-6" aria-label="Next slide" />
         </Carousel>
+
+        {/* Thumbnail Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+          {galleryMedia.filter(m => m.type === "image").map((media, index) => (
+            <button
+              key={index}
+              type="button"
+              onClick={() => openLightbox(media, galleryMedia.indexOf(media))}
+              className="group relative aspect-square overflow-hidden rounded-xl bg-muted/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              aria-label={`View ${media.caption}`}
+            >
+              <img
+                src={media.src}
+                alt={media.alt}
+                loading="lazy"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/50 transition-colors duration-300 flex items-end">
+                <p className="text-primary-foreground text-xs font-medium p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">
+                  {media.caption}
+                </p>
+              </div>
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Lightbox Modal */}
