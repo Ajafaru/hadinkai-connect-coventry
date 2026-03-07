@@ -158,15 +158,29 @@ const FeaturedEvents = () => {
                   loading="lazy"
                 />
                 <div className="p-4 bg-gradient-to-t from-[hsl(160,40%,10%)] to-[hsl(160,40%,15%)]/80">
-                  <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-secondary/20">
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-secondary/20">
                     <video
+                      ref={videoRef}
                       src="/videos/ramadan-iftar-2026.mp4"
-                      controls
+                      controls={isPlaying}
                       preload="metadata"
                       className="w-full object-cover"
+                      onPause={() => setIsPlaying(false)}
+                      onPlay={() => setIsPlaying(true)}
                     >
                       Your browser does not support the video tag.
                     </video>
+                    {!isPlaying && (
+                      <button
+                        onClick={handlePlay}
+                        className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/20 transition-colors cursor-pointer group"
+                        aria-label="Play video"
+                      >
+                        <div className="w-20 h-20 rounded-full bg-[hsl(25,90%,55%)] flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+                          <Play className="w-9 h-9 text-white fill-white ml-1" />
+                        </div>
+                      </button>
+                    )}
                   </div>
                   <p className="text-white/60 text-sm text-center mt-3 font-medium tracking-wide">
                     🎥 Ramadan Iftar Highlights
