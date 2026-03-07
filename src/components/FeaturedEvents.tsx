@@ -147,15 +147,21 @@ const FeaturedEvents = () => {
                   className="w-full object-cover min-h-[250px] flex-1"
                   loading="lazy"
                 />
-                <video
-                  src="/videos/ramadan-iftar-2026.mp4"
-                  controls
-                  preload="metadata"
-                  className="w-full object-cover"
-                  poster=""
-                >
-                  Your browser does not support the video tag.
-                </video>
+                <div className="p-4 bg-gradient-to-t from-[hsl(160,40%,10%)] to-[hsl(160,40%,15%)]/80">
+                  <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-secondary/20">
+                    <video
+                      src="/videos/ramadan-iftar-2026.mp4"
+                      controls
+                      preload="metadata"
+                      className="w-full object-cover"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <p className="text-white/60 text-sm text-center mt-3 font-medium tracking-wide">
+                    🎥 Ramadan Iftar Highlights
+                  </p>
+                </div>
               </div>
             </div>
 
