@@ -48,8 +48,8 @@ const FeaturedEvents = () => {
                   src={ramadanMubarakSarkin}
                   alt="Sarkin Zango Coventry, Mai Martaba Alhaji Umar Abass, wishing Ramadan Mubarak"
                   className="w-full max-w-md rounded-2xl shadow-2xl object-cover"
-                  loading="lazy"
-                />
+                  loading="lazy" />
+                
               </div>
 
               {/* Right: Message */}
@@ -135,15 +135,15 @@ const FeaturedEvents = () => {
                 <div className="flex flex-wrap gap-3">
                   <a
                     href="mailto:Hadinkai2024@gmail.com?subject=Ramadan%20Iftar%202026%20RSVP"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-secondary text-secondary-foreground font-semibold hover:bg-secondary/90 transition-colors"
-                  >
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-secondary text-secondary-foreground font-semibold hover:bg-secondary/90 transition-colors">
+                    
                     RSVP Now
                     <ArrowRight className="w-4 h-4" />
                   </a>
                   <a
                     href="tel:07862061181"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/20 text-white font-semibold hover:bg-white/10 transition-colors"
-                  >
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/20 text-white font-semibold hover:bg-white/10 transition-colors">
+                    
                     Contact Mansur: 07862061181
                   </a>
                 </div>
@@ -155,8 +155,8 @@ const FeaturedEvents = () => {
                   src={ramadanPoster}
                   alt="Ramadan Iftar 2026 official invitation poster by Hadin Kai Community"
                   className="w-full object-cover min-h-[250px] flex-1"
-                  loading="lazy"
-                />
+                  loading="lazy" />
+                
                 <div className="p-4 bg-gradient-to-t from-[hsl(160,40%,10%)] to-[hsl(160,40%,15%)]/80">
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-secondary/20">
                     <video
@@ -166,21 +166,21 @@ const FeaturedEvents = () => {
                       preload="metadata"
                       className="w-full object-cover"
                       onPause={() => setIsPlaying(false)}
-                      onPlay={() => setIsPlaying(true)}
-                    >
+                      onPlay={() => setIsPlaying(true)}>
+                      
                       Your browser does not support the video tag.
                     </video>
-                    {!isPlaying && (
-                      <button
-                        onClick={handlePlay}
-                        className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/20 transition-colors cursor-pointer group"
-                        aria-label="Play video"
-                      >
+                    {!isPlaying &&
+                    <button
+                      onClick={handlePlay}
+                      className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/20 transition-colors cursor-pointer group"
+                      aria-label="Play video">
+                      
                         <div className="w-20 h-20 rounded-full bg-[hsl(25,90%,55%)] flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                           <Play className="w-9 h-9 text-white fill-white ml-1" />
                         </div>
                       </button>
-                    )}
+                    }
                   </div>
                   <p className="text-white/60 text-sm text-center mt-3 font-medium tracking-wide">
                     🎥 Ramadan Iftar Highlights
@@ -192,20 +192,20 @@ const FeaturedEvents = () => {
             {/* Photo strip */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
               {[
-                { src: eidLeadersPanel, alt: "Leaders addressing the community during Eid celebration" },
-                { src: iftarDinnerServing, alt: "Community members serving Iftar dinner" },
-                { src: prayerSession, alt: "Community prayer session during Ramadan" },
-                { src: iftarMealSharing, alt: "Members sharing Iftar meal together" },
-              ].map((img, i) => (
-                <div key={i} className="aspect-video overflow-hidden">
+              { src: eidLeadersPanel, alt: "Leaders addressing the community during Eid celebration" },
+              { src: iftarDinnerServing, alt: "Community members serving Iftar dinner" },
+              { src: prayerSession, alt: "Community prayer session during Ramadan" },
+              { src: iftarMealSharing, alt: "Members sharing Iftar meal together" }].
+              map((img, i) =>
+              <div key={i} className="aspect-video overflow-hidden">
                   <img
-                    src={img.src}
-                    alt={img.alt}
-                    loading="lazy"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -236,8 +236,8 @@ const FeaturedEvents = () => {
                   src={ghanaIndependenceLordMayor}
                   alt="Hadin Kai community delegation with the Lord Mayor at Ghana's 79th Independence celebration in Coventry"
                   className="w-full h-full object-cover min-h-[400px]"
-                  loading="lazy"
-                />
+                  loading="lazy" />
+                
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[hsl(45,60%,12%)]/80 lg:block hidden" />
               </div>
 
@@ -250,10 +250,10 @@ const FeaturedEvents = () => {
                 <h3 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
                   Hadin Kai @ Ghana's 79th Independence
                 </h3>
-                <p className="text-white/80 text-lg mb-6 leading-relaxed">
-                  Our community proudly represented at the 79th Ghana Independence Day 
-                  celebration in Coventry. A beautiful display of unity, cultural pride, 
-                  and the enduring bond between our Zango heritage and the wider Ghanaian diaspora.
+                <p className="text-white/80 text-lg mb-6 leading-relaxed">Our community proudly represented at the 69th Ghana Independence Day celebration in Coventry. A beautiful display of unity, cultural pride, and the enduring bond between our Zango heritage and the wider Ghanaian diaspora.
+
+
+
                 </p>
                 <p className="text-white/70 mb-8 leading-relaxed">
                   Community members adorned in traditional Kente and Northern attire joined 
@@ -276,16 +276,16 @@ const FeaturedEvents = () => {
                   src={ghanaIndependenceGroup}
                   alt="Hadin Kai delegation members in traditional attire at Ghana Independence celebration"
                   loading="lazy"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                
               </div>
               <div className="aspect-video overflow-hidden">
                 <img
                   src={ghanaIndependenceLordMayor}
                   alt="Community members with Lord Mayor celebrating Ghana's Independence"
                   loading="lazy"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                
               </div>
             </div>
 
@@ -298,8 +298,8 @@ const FeaturedEvents = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default FeaturedEvents;
