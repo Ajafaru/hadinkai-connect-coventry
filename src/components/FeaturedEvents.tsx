@@ -248,7 +248,7 @@ const FeaturedEvents = () => {
                   Ghana @ 79
                 </div>
                 <h3 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
-                  Hadin Kai @ Ghana's 79th Independence
+                  Hadin Kai @ Ghana's 69th Independence
                 </h3>
                 <p className="text-white/80 text-lg mb-6 leading-relaxed">Our community proudly represented at the 69th Ghana Independence Day celebration in Coventry. A beautiful display of unity, cultural pride, and the enduring bond between our Zango heritage and the wider Ghanaian diaspora.
 
