@@ -8,6 +8,7 @@ import Gallery from "@/components/Gallery";
 import News from "@/components/News";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import DynamicSections from "@/components/DynamicSections";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <main>
         <Hero />
         <FeaturedEvents />
+        <DynamicSections />
         <About />
         <Programs />
         <Leadership />
