@@ -63,6 +63,14 @@ const Footer = () => {
                   Events
                 </Link>
               </li>
+              <li>
+                <Link 
+                  to="/login" 
+                  className="text-primary-foreground/70 hover:text-secondary transition-colors"
+                >
+                  Member Login
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -12,6 +12,7 @@ const navLinks = [
   { label: "Gallery", href: "#gallery" },
   { label: "Events", href: "/events", isRoute: true },
   { label: "Contact", href: "#contact" },
+  { label: "Login", href: "/login", isRoute: true },
 ];
 
 const Header = () => {
