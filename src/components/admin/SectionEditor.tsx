@@ -104,7 +104,7 @@ const SectionEditor = ({ section, userId, onSaved, onCancel }: SectionEditorProp
       title: title.trim(),
       subtitle: subtitle.trim() || null,
       body: body.trim() || null,
-      content: content as unknown as Record<string, unknown>,
+      content: JSON.parse(JSON.stringify(content)),
       media_urls: mediaUrls,
       created_by: userId,
     };
@@ -117,7 +117,6 @@ const SectionEditor = ({ section, userId, onSaved, onCancel }: SectionEditorProp
         .eq("id", section.id);
       error = e;
     } else {
-      // Get max display_order
       const { data: maxData } = await supabase
         .from("content_sections")
         .select("display_order")
@@ -127,7 +126,7 @@ const SectionEditor = ({ section, userId, onSaved, onCancel }: SectionEditorProp
 
       const { error: e } = await supabase
         .from("content_sections")
-        .insert({ ...payload, display_order: nextOrder });
+        .insert([{ ...payload, display_order: nextOrder }]);
       error = e;
     }
 
