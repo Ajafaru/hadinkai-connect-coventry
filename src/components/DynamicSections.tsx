@@ -24,7 +24,7 @@ const DynamicSections = () => {
         .from("content_sections")
         .select("*")
         .eq("published", true)
-        .order("created_at", { ascending: true });
+        .order("created_at", { ascending: false });
       if (data) setSections(data as unknown as ContentSection[]);
     };
     fetchSections();
