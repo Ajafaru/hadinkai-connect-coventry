@@ -98,10 +98,10 @@ const Donate = () => {
                     <ArrowRight className="w-4 h-4" />
                   </a>
                   <a 
-                    href="tel:+447564499627"
+                    href="tel:+447706681637"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-secondary text-secondary font-semibold hover:bg-secondary/10 transition-colors"
                   >
-                    Call: +44 7564 499627
+                    Call: +44 7706 681637
                   </a>
                 </div>
               </div>
