@@ -111,7 +111,7 @@ const Privacy = () => {
                     <div className="mt-4 p-4 rounded-lg bg-card border border-border">
                       <p className="text-foreground font-semibold">Hadin Kai Community – Coventry</p>
                       <p className="text-muted-foreground">Email: Hadinkai2024@gmail.com</p>
-                      <p className="text-muted-foreground">Phone: +44 7564 499627</p>
+                      <p className="text-muted-foreground">Phone: +44 7706 681637</p>
                     </div>
                   </section>
                 </article>
